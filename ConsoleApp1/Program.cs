@@ -19,11 +19,12 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("dizin mevcut");
                     //dizin silme işlemi
-                    NewDir.Delete();
+                    NewDir.Delete(true);
                     Console.WriteLine("dizin silindi");
                 }
                 //yeni dizin oluşturma
                 NewDir.Create();
+                NewDir.Refresh();
                 Console.WriteLine("klasör olusturuldu ");
                 Console.WriteLine("olusturulma tarihi " + NewDir.CreationTime);
                 Console.WriteLine("bulundugu dizinin adı " + NewDir.Parent);
